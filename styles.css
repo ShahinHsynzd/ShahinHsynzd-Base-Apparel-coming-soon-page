@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Big Columns */
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+.left-column {
+    height: 100vh;
+    flex: 60%;
+    background: url("images/bg-pattern-desktop.svg") no-repeat center center;
+    background-size: cover;
+}
+.right-column {
+    height: 100vh;
+    flex: 40%;
+    background-image: url("images/hero-desktop.jpg");
+    background-size: cover;
+}
+/* Left Container */
+
+.logo img {
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    
+}
+.mobile-image img {
+    display: none;
+}
+
+.showcase {
+    max-width: 500px;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+/* Text */
+.showcase-text h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: 1.2rem;
+    font-weight: 600;
+}
+
+.showcase-text span {
+    font-weight: 300;
+    color: #ce9797;
+}
+.showcase-text p {
+    line-height: 1.8;
+    color: hsl(0, 36%, 70%);
+    margin-bottom: 5%;
+    padding: 5% 10% 2% 0;
+}
+/* Input */
+.add-email {
+    position: relative;
+}
+
+.sign-up {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    margin-top: 30px;
+    background: transparent;
+    margin-left: 0;
+    
+}
+
+.sign-up input {
+    border-radius: 50px;
+    border: solid 1px #bea7a7;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color:hsl(0, 36%, 70%);
+    background: transparent;
+    width: 85%;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.sign-up img {
+    position: absolute;
+    right: 38%;
+    top: 15%;
+}
+
+button {
+    background: rgb(251, 202, 202);
+    background: linear-gradient(90deg, rgba(251, 202, 202, 1) 1%, rgba(235, 172, 172, 1) 25%, rgba(211, 105, 105, 1) 94%);
+    border-radius: 100px;
+    border: none;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 15%;
+    box-shadow: 10px 10px 40px #999292;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(251, 202, 202);
+}
+
+button img {
+    margin-top: 5%;
+    width: 20px;
+    height: auto;
+}
+#sign-error {
+    display: none;
+}
+.error-message {
+    padding-left: 5%;
+    padding-top: 3%;
+    color: #f87878;
+    font-size: 14px;
+}
+
+/* Media Quiery */
+
+@media (max-width: 900px) {
+    
+    .left-column {
+        height: 100%;
+    }
+    .right-column {
+        display: none;
+        height: 100%;
+    }
+
+    .mobile-imag {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .mobile-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+    }
+
+    .showcase {
+        text-align: center;
+        margin: auto;
+    }
+
+    .sign-up {
+        position: relative;
+    }
+
+    button {
+        width: 80px;
+        height: 50px;
+        position: absolute;
+        right: 5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .showcase-text h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        letter-spacing: 1rem;
+        font-weight: 600;
+    }
+}
